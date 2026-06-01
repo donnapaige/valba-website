@@ -8,9 +8,74 @@ export const metadata: Metadata = {
     'Selected work from Valba Corp — operational systems built for real businesses. ERP platforms, HRIS, client portals, and booking systems delivered in weeks.',
 }
 
+const launches = [
+  {
+    index: '01',
+    type: 'Web App',
+    industry: 'Family & Household',
+    name: 'Nest HQ',
+    url: 'nest-hq-xi.vercel.app',
+    href: 'https://nest-hq-xi.vercel.app/',
+    tagline: 'A family’s homebase — one shared system for everything a household actually runs on.',
+    feats: [
+      'Shared dashboard for the whole family, accounts and per-member sign-in',
+      'Replaces the scatter of group chats, sticky notes and rival calendars',
+      'Clean, fast interface built to feel effortless on any device',
+    ],
+    metrics: [
+      { val: '1 wk', lbl: 'Concept to live' },
+      { val: '5→1', lbl: 'Apps replaced' },
+      { val: '100%', lbl: 'Household on one system' },
+    ],
+    reverse: false,
+  },
+  {
+    index: '02',
+    type: 'SaaS Platform',
+    industry: 'Dance & Performing Arts Schools',
+    name: 'Classly',
+    url: 'classly.app/admin',
+    href: 'https://classly-umber.vercel.app/',
+    tagline: 'The operating system for a dance school — enrollment, scheduling, billing and payroll in one place.',
+    feats: [
+      'Admin dashboard with live KPIs: active students, classes, revenue, outstanding',
+      'Scheduling, enrollment and waitlists across studios and rooms',
+      'Billing and invoices with local payment methods, plus payroll & accounting',
+      'Built-in messaging for parents and teachers',
+    ],
+    metrics: [
+      { val: '2 wk', lbl: 'Build time' },
+      { val: '6→1', lbl: 'Tools replaced' },
+      { val: '8', lbl: 'Modules, one platform' },
+    ],
+    reverse: true,
+  },
+  {
+    index: '03',
+    type: 'Editorial Website',
+    industry: 'Personal Brand & Portfolio',
+    name: 'Paige Systems',
+    url: 'paigesystems.com',
+    href: 'https://paigesystems.lovable.app/',
+    tagline: 'An editorial portfolio for a systems architect & brand builder — designed to win the work.',
+    feats: [
+      'Full-bleed editorial hero with animated marquee and custom typography',
+      'About, portfolio and services in one elegant, considered scroll',
+      'Built-in project enquiry form with budget routing and fast reply',
+    ],
+    metrics: [
+      { val: '1 wk', lbl: 'Design to launch' },
+      { val: '100%', lbl: 'Custom-coded front end' },
+      { val: '5', lbl: 'Service offerings framed' },
+    ],
+    reverse: false,
+  },
+]
+
 export default function Work() {
   return (
     <ScrollReveal>
+      {/* HERO */}
       <header className="page-hero grain">
         <span className="page-hero-caption">FIG.03 — SELECTED BUILDS</span>
         <div className="wrap">
@@ -19,22 +84,85 @@ export default function Work() {
             Systems built. Problems <span className="flare">solved.</span>
           </h1>
           <p className="page-hero-sub fade-up fade-up-d3">
-            Four operational systems built for real businesses. No agency markup, no dev team overhead — just production-ready platforms delivered in weeks.
+            Three recent launches you can click into — plus the operational systems we&apos;ve built for businesses that prefer to stay confidential.
           </p>
-          <p className="page-hero-note fade-up fade-up-d4">Visuals are abstract representations. Client details confidential.</p>
         </div>
       </header>
 
-      {/* CASE STUDIES */}
+      {/* RECENT LAUNCHES */}
+      <section className="section section--paper">
+        <div className="wrap">
+          <div className="launches-head reveal">
+            <span className="section-label">Recent Launches</span>
+            <h2>Builds you can click into.</h2>
+            <p>A consumer app, a vertical SaaS platform, and an editorial brand site — each designed, built, and shipped end to end. Live and in the open.</p>
+          </div>
+
+          <div className="fb-list">
+            {launches.map((build) => (
+              <article className={`fb-row${build.reverse ? ' reverse' : ''} reveal`} key={build.index}>
+                <div className="fb-media">
+                  <span className="fb-index">{build.index}</span>
+                  <div className="fb-frame">
+                    <div className="fb-bar">
+                      <span className="fb-dot" />
+                      <span className="fb-dot" />
+                      <span className="fb-dot" />
+                      <span className="fb-url">{build.url}</span>
+                    </div>
+                    <div className="fb-shot">
+                      <div className="fb-shot-placeholder" aria-hidden="true" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="fb-info">
+                  <div className="fb-meta">
+                    <span className="fb-type">{build.type}</span>
+                    <span className="fb-meta-divider" />
+                    <span className="fb-industry">{build.industry}</span>
+                  </div>
+                  <h3 className="fb-name">{build.name}</h3>
+                  <p className="fb-tagline">{build.tagline}</p>
+                  <ul className="fb-feats">
+                    {build.feats.map((f, i) => <li key={i}>{f}</li>)}
+                  </ul>
+                  <div className="fb-metrics">
+                    {build.metrics.map((m) => (
+                      <div key={m.lbl}>
+                        <span className="fb-metric-val">{m.val}</span>
+                        <span className="fb-metric-lbl">{m.lbl}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <a href={build.href} target="_blank" rel="noopener noreferrer" className="fb-link">
+                    Visit live site
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CONFIDENTIAL CASE STUDIES */}
       <section className="section section--ink">
         <div className="wrap">
-          <div style={{ marginBottom: 'var(--space-6)', display: 'flex', justifyContent: 'flex-end' }}>
-            <a href="mailto:valba.app@etchworksdigital.com?subject=Sample build access request" className="link-arrow">
+          <div className="cs-head reveal">
+            <div className="cs-head-text">
+              <span className="section-label">Confidential Systems</span>
+              <h2>Operational backbones, built behind the scenes.</h2>
+              <p>Visuals are abstract representations. Client details confidential.</p>
+            </div>
+            <a
+              href="mailto:valba.app@etchworksdigital.com?subject=Sample build access request"
+              className="link-arrow"
+            >
               Request access to sample builds
             </a>
           </div>
-          <div className="cs-grid">
 
+          <div className="cs-grid">
             {/* CS1 — wide */}
             <article className="cs-card wide reveal">
               <span className="card-top-accent" />
