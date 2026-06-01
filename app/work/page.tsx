@@ -29,7 +29,7 @@ export default function Work() {
       <section className="section section--ink">
         <div className="wrap">
           <div style={{ marginBottom: 'var(--space-6)', display: 'flex', justifyContent: 'flex-end' }}>
-            <a href="mailto:hello@valba.co?subject=Sample build access request" className="link-arrow">
+            <a href="mailto:valba.app@etchworksdigital.com?subject=Sample build access request" className="link-arrow">
               Request access to sample builds
             </a>
           </div>

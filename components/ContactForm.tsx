@@ -87,7 +87,7 @@ export default function ContactForm() {
           {loading ? 'Sending…' : 'Send Message'}
         </button>
       </form>
-      <p className="form-note">Prefer email? Reach us at <a href="mailto:hello@valba.co">hello@valba.co</a></p>
+      <p className="form-note">Prefer email? Reach us at <a href="mailto:valba.app@etchworksdigital.com">valba.app@etchworksdigital.com</a></p>
     </div>
   )
 }

@@ -20,7 +20,7 @@ export default function Footer() {
           </nav>
           <div className="footer-col footer-col--cta">
             <Link href="/contact" className="btn-primary">Start a Project</Link>
-            <a href="mailto:hello@valba.co" className="footer-email">hello@valba.co</a>
+            <a href="mailto:valba.app@etchworksdigital.com" className="footer-email">valba.app@etchworksdigital.com</a>
           </div>
         </div>
         <div className="footer-bottom">
