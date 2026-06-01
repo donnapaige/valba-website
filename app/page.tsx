@@ -25,7 +25,16 @@ export default function Home() {
         </div>
 
         <div className="hero-media">
-          <div className="hero-media-placeholder" aria-hidden="true" />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="hero-video"
+            aria-hidden="true"
+          >
+            <source src="/hero.mp4" type="video/mp4" />
+          </video>
           <span className="hero-plate-caption">FIG.01 — OPERATIONS PLATE</span>
           <div className="hero-mark-overlay">
             <div className="valba-mark" aria-hidden="true"><i /><i /><i /></div>
