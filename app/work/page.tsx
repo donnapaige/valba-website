@@ -16,7 +16,8 @@ const launches = [
     industry: 'Family & Household',
     name: 'Nest HQ',
     url: 'nest-hq-xi.vercel.app',
-    href: "https://nest-hq-xi.vercel.app/",
+    href: "mailto:valba.app@etchworksdigital.com?subject=Sample build access request — Nest HQ",
+    linkLabel: "Request access to sample build",
     screenshot: "/screenshots/nest-hq.png",
     tagline: "A family’s homebase — one shared system for everything a household actually runs on.",
     feats: [
@@ -37,7 +38,8 @@ const launches = [
     industry: 'Dance & Performing Arts Schools',
     name: 'Classly',
     url: 'classly.app/admin',
-    href: 'https://classly-umber.vercel.app/',
+    href: "mailto:valba.app@etchworksdigital.com?subject=Sample build access request — Classly",
+    linkLabel: "Request access to sample build",
     screenshot: '/screenshots/classly.png',
     tagline: 'The operating system for a dance school — enrollment, scheduling, billing and payroll in one place.',
     feats: [
@@ -60,6 +62,7 @@ const launches = [
     name: 'Paige Systems',
     url: 'paigesystems.com',
     href: 'https://paigesystems.lovable.app/',
+    linkLabel: "Visit live site",
     screenshot: '/screenshots/paige-systems.png',
     tagline: 'An editorial portfolio for a systems architect & brand builder — designed to win the work.',
     feats: [
@@ -145,8 +148,13 @@ export default function Work() {
                       </div>
                     ))}
                   </div>
-                  <a href={build.href} target="_blank" rel="noopener noreferrer" className="fb-link">
-                    Visit live site
+                  <a
+                    href={build.href}
+                    target={build.href.startsWith('mailto') ? undefined : '_blank'}
+                    rel={build.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+                    className="fb-link"
+                  >
+                    {build.linkLabel}
                   </a>
                 </div>
               </article>
