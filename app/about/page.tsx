@@ -36,7 +36,16 @@ export default function About() {
           </div>
           <div className="about-media reveal reveal-d2">
             <span className="about-media-caption">FIG.A — OPERATIONS, ON THE FLOOR</span>
-            <div style={{ width: '100%', height: '100%', background: 'var(--concrete-lt)' }} aria-hidden="true" />
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+              aria-hidden="true"
+            >
+              <source src="/about.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </section>
