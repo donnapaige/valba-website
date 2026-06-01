@@ -47,7 +47,7 @@ export default function Contact() {
             <div className="info-block">
               <span className="info-block-label">Not Ready Yet?</span>
               <p className="info-block-text">
-                Start with a Discovery Audit ($500–$1,500, 3–5 days). You&apos;ll walk away with a complete build roadmap regardless of whether you proceed.<br /><br />
+                Start with a Discovery Audit (3–5 days). You&apos;ll walk away with a complete build roadmap regardless of whether you proceed.<br /><br />
                 <Link href="/services">Learn about the Discovery Audit →</Link>
               </p>
             </div>

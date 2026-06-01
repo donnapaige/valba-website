@@ -13,7 +13,6 @@ const services = [
     num: '01',
     name: 'Discovery & Systems Audit',
     for: 'Any business unsure where to start',
-    price: '$500 – $1,500',
     timeline: '3–5 days',
     includes: [
       'Operations mapping session (remote, 90–120 min)',
@@ -27,7 +26,6 @@ const services = [
     num: '02',
     name: 'Business Systems & ERP',
     for: 'Manufacturers, service businesses, and operators with 10–80 employees',
-    price: '$3,000 – $10,000',
     timeline: 'Framework live in 1 week · Production-ready in 3 weeks',
     includes: [
       'Up to 4 custom operational modules (production, inventory, orders, team)',
@@ -41,7 +39,6 @@ const services = [
     num: '03',
     name: 'Custom Internal SaaS / Web App',
     for: 'Startups and product companies that need a client-facing tool or internal platform',
-    price: '$5,000 – $15,000',
     timeline: '2–4 weeks',
     includes: [
       'Custom web application with your branding and workflow',
@@ -139,7 +136,6 @@ export default function Services() {
                 <div className="svc-entry-name">{s.name}</div>
                 <span className="svc-for-label">For</span>
                 <div className="svc-for">{s.for}</div>
-                <span className="svc-price">{s.price}</span>
                 <span className="svc-timeline">{s.timeline}</span>
               </div>
               <div className="svc-right">
@@ -159,22 +155,19 @@ export default function Services() {
           <div className="reveal">
             <span className="section-label">Ongoing Support</span>
             <h2 className="ret-h2">Every build includes 30 days of support. Most clients stay longer.</h2>
-            <p className="ret-body">After launch, we offer a System Management Retainer at $500–$1,500/month — covering updates, new modules, and ongoing ops advisory. Most clients turn a single build into a long-term operating relationship.</p>
+            <p className="ret-body">After launch, we offer a System Management Retainer — covering updates, new modules, and ongoing ops advisory. Most clients turn a single build into a long-term operating relationship.</p>
           </div>
           <div className="ret-tiers reveal reveal-d2">
             <div className="ret-tier">
               <div className="ret-tier-name">System Maintenance</div>
-              <div className="ret-tier-price">$500<span>/mo</span></div>
               <div className="ret-tier-detail">5 hrs · Minor updates and fixes</div>
             </div>
             <div className="ret-tier featured">
               <div className="ret-tier-name">System Management</div>
-              <div className="ret-tier-price">$1,000<span>/mo</span></div>
               <div className="ret-tier-detail">10 hrs · Updates + new modules + reporting</div>
             </div>
             <div className="ret-tier">
               <div className="ret-tier-name">Fractional COO</div>
-              <div className="ret-tier-price">$1,500<span>/mo</span></div>
               <div className="ret-tier-detail">10 hrs · All of above + strategic ops advisory</div>
             </div>
           </div>

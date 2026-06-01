@@ -342,7 +342,7 @@ export default function Work() {
             <p className="pn-body">Discovery first. Scope defined. Price fixed. We don&apos;t start until you know exactly what you&apos;re getting — and we don&apos;t change the price after we start.</p>
           </div>
           <div className="pn-steps reveal reveal-d2">
-            <div className="pn-step"><div className="pn-step-title">01 · Discovery Audit</div><div className="pn-step-desc">We map your operations and define what needs to be built. 3–5 days, $500–$1,500.</div></div>
+            <div className="pn-step"><div className="pn-step-title">01 · Discovery Audit</div><div className="pn-step-desc">We map your operations and define what needs to be built. Delivered in 3–5 days.</div></div>
             <div className="pn-step"><div className="pn-step-title">02 · Fixed Scope &amp; Price</div><div className="pn-step-desc">You receive a detailed scope document and a fixed price. No surprises.</div></div>
             <div className="pn-step"><div className="pn-step-title">03 · Build</div><div className="pn-step-desc">Framework live in under a week. Production-ready in 2–3 weeks.</div></div>
             <div className="pn-step"><div className="pn-step-title">04 · Handover &amp; Support</div><div className="pn-step-desc">Documentation, team training, 30 days of post-launch support.</div></div>

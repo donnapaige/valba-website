@@ -73,7 +73,7 @@ export default function About() {
           <div className="stat reveal"><div className="stat-value">2–3 wk</div><div className="stat-label">From brief to production-ready</div></div>
           <div className="stat reveal reveal-d1"><div className="stat-value">4+</div><div className="stat-label">Full operating systems shipped</div></div>
           <div className="stat reveal reveal-d2"><div className="stat-value">6+</div><div className="stat-label">Years running real operations</div></div>
-          <div className="stat reveal reveal-d3"><div className="stat-value">$3K–$35K</div><div className="stat-label">Most projects land here</div></div>
+          <div className="stat reveal reveal-d3"><div className="stat-value">30 days</div><div className="stat-label">Included post-launch support</div></div>
         </div>
       </section>
 

@@ -82,7 +82,7 @@ export default function Home() {
               <h3>Business Systems &amp; ERP</h3>
               <p className="svc-desc">Production, job costing, inventory, client orders — one place. Stop copying data between tools by hand.</p>
               <div className="svc-tags">
-                <span className="tag">Airtable</span><span className="tag">StartInfinity</span><span className="tag">Custom SaaS</span>
+                <span className="tag">Next.js</span><span className="tag">React</span><span className="tag">Tailwind</span><span className="tag">Custom SaaS</span>
               </div>
             </article>
 
@@ -97,7 +97,7 @@ export default function Home() {
               <h3>Custom Internal SaaS</h3>
               <p className="svc-desc">Client portals, booking platforms, and dashboards — built around your workflow, not a vendor&apos;s template.</p>
               <div className="svc-tags">
-                <span className="tag">Lovable</span><span className="tag">No-Code</span><span className="tag">Rapid Build</span>
+                <span className="tag">Next.js</span><span className="tag">React</span><span className="tag">Tailwind</span><span className="tag">Rapid Build</span>
               </div>
             </article>
 
@@ -140,7 +140,7 @@ export default function Home() {
           <div className="stat reveal"><div className="stat-value">2–3 wk</div><div className="stat-label">From brief to production-ready</div></div>
           <div className="stat reveal reveal-d1"><div className="stat-value">4+</div><div className="stat-label">Full operating systems shipped</div></div>
           <div className="stat reveal reveal-d2"><div className="stat-value">6+</div><div className="stat-label">Years running real operations</div></div>
-          <div className="stat reveal reveal-d3"><div className="stat-value">$3K–$35K</div><div className="stat-label">Most projects land here</div></div>
+          <div className="stat reveal reveal-d3"><div className="stat-value">30 days</div><div className="stat-label">Included post-launch support</div></div>
         </div>
       </section>
 
