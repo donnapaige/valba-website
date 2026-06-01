@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import ScrollReveal from '@/components/ScrollReveal'
 import type { Metadata } from 'next'
 
@@ -15,8 +16,9 @@ const launches = [
     industry: 'Family & Household',
     name: 'Nest HQ',
     url: 'nest-hq-xi.vercel.app',
-    href: 'https://nest-hq-xi.vercel.app/',
-    tagline: 'A family’s homebase — one shared system for everything a household actually runs on.',
+    href: "https://nest-hq-xi.vercel.app/",
+    screenshot: "/screenshots/nest-hq.png",
+    tagline: "A family’s homebase — one shared system for everything a household actually runs on.",
     feats: [
       'Shared dashboard for the whole family, accounts and per-member sign-in',
       'Replaces the scatter of group chats, sticky notes and rival calendars',
@@ -36,6 +38,7 @@ const launches = [
     name: 'Classly',
     url: 'classly.app/admin',
     href: 'https://classly-umber.vercel.app/',
+    screenshot: '/screenshots/classly.png',
     tagline: 'The operating system for a dance school — enrollment, scheduling, billing and payroll in one place.',
     feats: [
       'Admin dashboard with live KPIs: active students, classes, revenue, outstanding',
@@ -57,6 +60,7 @@ const launches = [
     name: 'Paige Systems',
     url: 'paigesystems.com',
     href: 'https://paigesystems.lovable.app/',
+    screenshot: '/screenshots/paige-systems.png',
     tagline: 'An editorial portfolio for a systems architect & brand builder — designed to win the work.',
     feats: [
       'Full-bleed editorial hero with animated marquee and custom typography',
@@ -111,7 +115,13 @@ export default function Work() {
                       <span className="fb-url">{build.url}</span>
                     </div>
                     <div className="fb-shot">
-                      <div className="fb-shot-placeholder" aria-hidden="true" />
+                      <Image
+                        src={build.screenshot}
+                        alt={`${build.name} screenshot`}
+                        fill
+                        style={{ objectFit: 'cover', objectPosition: 'top' }}
+                        sizes="(max-width: 980px) 100vw, 50vw"
+                      />
                     </div>
                   </div>
                 </div>

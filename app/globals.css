@@ -532,7 +532,7 @@ p { font-family: var(--font-body); font-weight: 400; font-size: 1.0625rem; line-
   font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.04em;
   color: var(--text-muted); margin-left: 0.25rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.fb-shot { aspect-ratio: 16/10; background: var(--concrete-lt); overflow: hidden; position: relative; }
+.fb-shot { aspect-ratio: 16/10; background: var(--concrete-lt); overflow: hidden; position: relative; display: block; }
 .fb-shot-placeholder { position: absolute; inset: 0; background: var(--concrete-lt); }
 
 .fb-info {}
