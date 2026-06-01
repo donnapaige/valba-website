@@ -28,6 +28,11 @@ export default function Work() {
       {/* CASE STUDIES */}
       <section className="section section--ink">
         <div className="wrap">
+          <div style={{ marginBottom: 'var(--space-6)', display: 'flex', justifyContent: 'flex-end' }}>
+            <a href="mailto:hello@valba.co?subject=Sample build access request" className="link-arrow">
+              Request access to sample builds
+            </a>
+          </div>
           <div className="cs-grid">
 
             {/* CS1 — wide */}
