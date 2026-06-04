@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Archivo, Space_Mono } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
@@ -19,6 +19,11 @@ const spaceMono = Space_Mono({
   display: 'swap',
   variable: '--font-space-mono',
 })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
 
 export const metadata: Metadata = {
   title: 'Valba Corp — Custom ERP & Internal SaaS. Built in 2–3 Weeks.',
