@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 
 const archivo = Archivo({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  weight: ['400', '700', '800'],
   style: ['normal', 'italic'],
   display: 'swap',
   variable: '--font-archivo',

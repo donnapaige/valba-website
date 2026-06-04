@@ -41,6 +41,7 @@ export default function About() {
               muted
               loop
               playsInline
+              preload="none"
               style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
               aria-hidden="true"
             >
