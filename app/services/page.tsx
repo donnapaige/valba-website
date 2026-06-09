@@ -154,7 +154,7 @@ export default function Services() {
         <div className="wrap ret-inner">
           <div className="reveal">
             <span className="section-label">Ongoing Support</span>
-            <h2 className="ret-h2">Every build includes 30 days of support. Most clients stay longer.</h2>
+            <h2 className="ret-h2">Every build includes <span className="flare">30 days of support.</span> Most clients stay longer.</h2>
             <p className="ret-body">After launch, we offer a System Management Retainer — covering updates, new modules, and ongoing ops advisory. Most clients turn a single build into a long-term operating relationship.</p>
           </div>
           <div className="ret-tiers reveal reveal-d2">
