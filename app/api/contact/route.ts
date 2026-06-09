@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
     await resend.emails.send({
       from: 'Valba Contact Form <onboarding@resend.dev>',
-      to: 'paige@etchworksdigital.com',
+      to: 'valba.app@etchworksdigital.com',
       replyTo: email,
       subject: `New enquiry from ${name} — ${company}`,
       text: [
