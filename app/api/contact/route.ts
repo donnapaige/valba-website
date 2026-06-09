@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
     await resend.emails.send({
       from: 'Valba Contact Form <onboarding@resend.dev>',
-      to: 'valba.app@etchworksdigital.com',
+      to: 'heypaigedesign@gmail.com', // TODO: swap back to valba.app@etchworksdigital.com once Resend domain verified
       replyTo: email,
       subject: `New enquiry from ${name} — ${company}`,
       text: [
