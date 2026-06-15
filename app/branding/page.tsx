@@ -1,9 +1,4 @@
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Valba Corp — Brand System',
-  robots: { index: false, follow: false },
-}
+'use client'
 
 const colors = [
   { name: 'Ink', var: '--ink', hex: '#111110', dark: true },
@@ -40,12 +35,6 @@ const spacingTokens = [
   { token: '--space-16', px: '128px' },
 ]
 
-const uiElements = [
-  { label: 'Primary Button', el: <a href="#" className="btn-primary" onClick={e => e.preventDefault()}>Start a Project</a> },
-  { label: 'Ghost Button (Dark BG)', el: <a href="#" className="btn-ghost" onClick={e => e.preventDefault()}>See Services</a> },
-  { label: 'Ghost Button (Light BG)', el: <a href="#" className="btn-ghost-dark" onClick={e => e.preventDefault()}>See Our Work</a> },
-  { label: 'Link Arrow', el: <a href="#" className="link-arrow" onClick={e => e.preventDefault()}>Discuss This Project</a> },
-]
 
 export default function Branding() {
   return (
