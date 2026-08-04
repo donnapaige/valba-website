@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<meta name="ext-resource-dependency" content="uploads/image1-hero-collection.png" data-resource-id="hero1" />
+<meta name="ext-resource-dependency" content="uploads/image2-hero-styling.png" data-resource-id="hero2" />
+<template id="__bundler_thumbnail" data-bg-color="#f4f1ea">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#f4f1ea"/>
+    <rect x="30" y="30" width="40" height="40" fill="none" stroke="#141414" stroke-width="2"/>
+    <text x="50" y="47" font-family="Georgia,serif" font-size="14" fill="#141414" text-anchor="middle">OW</text>
+    <text x="50" y="80" font-family="Georgia,serif" font-size="9" fill="#141414" text-anchor="middle">Olive Winter</text>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: #141414; color: #f4f1ea; }
+</style>
+</helmet>
+
+<div style="background:oklch(97% 0.008 80); color:oklch(15% 0.005 80); font-family:'Inter',sans-serif; overflow-x:hidden;">
+
+  <!-- NAV -->
+  <header style="position:absolute; top:0; left:0; right:0; z-index:20; display:flex; align-items:center; justify-content:space-between; padding:28px 48px; background:linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%); color:#fff;">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <div style="width:38px; height:38px; border:1px solid currentColor; display:flex; align-items:center; justify-content:center; position:relative;">
+        <span style="font-family:'Bodoni Moda',serif; font-size:20px; line-height:1;">OW</span>
+      </div>
+      <span style="font-family:'Bodoni Moda',serif; font-size:19px; letter-spacing:0.02em;">Olive Winter</span>
+    </div>
+    <nav style="display:flex; gap:36px; font-size:12px; letter-spacing:0.12em; text-transform:uppercase;">
+      <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="4">
+        <a href="{{ link.href }}" style="opacity:0.85;" style-hover="opacity:1;">{{ link.label }}</a>
+      </sc-for>
+    </nav>
+    <a href="#contact" style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; border-bottom:1px solid currentColor; padding-bottom:2px;">Enquire</a>
+  </header>
+
+  <!-- HERO / SPLIT ENTRY -->
+  <section style="height:100vh; min-height:640px; display:grid; grid-template-columns:1fr 1fr;">
+    <sc-for list="{{ entryPanels }}" as="panel" hint-placeholder-count="2">
+      <a href="{{ panel.href }}" style="position:relative; display:flex; align-items:flex-end; padding:56px; overflow:hidden; border-right:0.5px solid rgba(0,0,0,0.08);" data-om-raster="true">
+        <div style="position:absolute; inset:0; background:{{ panel.stripe }}; filter:grayscale(1);"></div>
+        <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 22%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.55) 100%);"></div>
+        <span style="position:absolute; top:112px; left:56px; font-family:monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.75);">{{ panel.tag }}</span>
+        <div style="position:relative; z-index:2; color:#fff;">
+          <h2 style="font-family:'Bodoni Moda',serif; font-weight:400; font-size:clamp(32px,3.6vw,52px); margin:0 0 10px; line-height:1.05;">{{ panel.title }}</h2>
+          <p style="margin:0 0 18px; font-size:14px; font-weight:300; max-width:340px; line-height:1.6; color:rgba(255,255,255,0.85);">{{ panel.copy }}</p>
+          <span style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; border-bottom:1px solid #fff; padding-bottom:3px;">{{ panel.cta }}</span>
+        </div>
+      </a>
+    </sc-for>
+  </section>
+
+  <!-- FEATURED PIECE -->
+  <section style="display:grid; grid-template-columns:1.1fr 0.9fr; align-items:stretch; padding:0; border-bottom:0.5px solid rgba(0,0,0,0.1);">
+    <div style="position:relative; min-height:560px; background:url('uploads/image3-amara-mule.png') center/cover no-repeat; filter:grayscale(0.3);"></div>
+    <div style="display:flex; flex-direction:column; justify-content:center; padding:80px 64px;">
+      <span style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:oklch(15% 0.005 80 / 0.55); margin-bottom:20px;">Featured Piece</span>
+      <h2 style="font-family:'Bodoni Moda',serif; font-weight:400; font-size:clamp(30px,3.2vw,44px); margin:0 0 18px; line-height:1.1;">The Amara Mule</h2>
+      <p style="font-size:15px; line-height:1.75; font-weight:300; max-width:440px; margin:0 0 22px; color:oklch(15% 0.005 80 / 0.78);">Cut from vegetable-tanned leather and finished by hand in our Brisbane studio, the Amara is built to a last we've refined over four seasons — a single seam, an unlined vamp, a heel calibrated for all-day wear.</p>
+      <p style="font-size:13px; font-weight:300; letter-spacing:0.02em; margin:0 0 30px; color:oklch(15% 0.005 80 / 0.55);">AUD $340 &nbsp;·&nbsp; Made to order, 3–4 weeks</p>
+      <a href="Product Detail.dc.html" style="align-self:flex-start; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; border:1px solid oklch(15% 0.005 80); padding:14px 30px;">View the piece</a>
+    </div>
+  </section>
+
+  <!-- BRAND STORY TEASER -->
+  <section id="story" style="display:grid; grid-template-columns:0.9fr 1.1fr; align-items:stretch; background:oklch(93% 0.01 78);">
+    <div style="display:flex; flex-direction:column; justify-content:center; padding:80px 64px; order:1;">
+      <span style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:oklch(15% 0.005 80 / 0.55); margin-bottom:20px;">Our Story</span>
+      <blockquote style="font-family:'Bodoni Moda',serif; font-style:italic; font-weight:400; font-size:clamp(24px,2.4vw,32px); line-height:1.35; margin:0 0 24px; max-width:460px;">"We make one pair at a time, to one person's measure — nothing sits in a warehouse waiting to be wanted."</blockquote>
+      <p style="font-size:14px; line-height:1.8; font-weight:300; max-width:440px; margin:0 0 28px; color:oklch(15% 0.005 80 / 0.75);">Olive Winter began in Brisbane with a simple objection to overproduction. Every style is made to order in small runs from responsibly sourced materials, with the offcuts and errors that mass manufacturing hides kept to a minimum by design, not by marketing.</p>
+      <a href="#story" style="align-self:flex-start; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; border-bottom:1px solid oklch(15% 0.005 80);">Read our story</a>
+    </div>
+    <div style="position:relative; min-height:520px; order:2; background:url('uploads/image4-studio-brand-story.png') center/cover no-repeat;"></div>
+  </section>
+
+  <!-- AVAILABILITY NOTE -->
+  <section style="padding:40px 64px; border-bottom:0.5px solid rgba(0,0,0,0.1); text-align:center;">
+    <p style="font-size:13px; font-weight:300; line-height:1.7; max-width:640px; margin:0 auto; color:oklch(15% 0.005 80 / 0.65);">Some of our shoe styles may be made to order, while others are available for immediate purchase. Product pages will note availability where possible, and we'll confirm any lead times before your order is completed.</p>
+  </section>
+
+  <!-- SERVICES TEASER -->
+  <section style="padding:96px 64px; background:oklch(15% 0.005 80); color:oklch(97% 0.008 80);">
+    <div style="display:grid; grid-template-columns:0.8fr 1.2fr; gap:64px; margin-bottom:64px;">
+      <div>
+        <span style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.55);">Styling Services</span>
+        <h2 style="font-family:'Bodoni Moda',serif; font-weight:400; font-size:clamp(30px,3.2vw,44px); margin:16px 0 0; line-height:1.1;">Beyond the shoe.</h2>
+      </div>
+      <div style="display:flex; flex-direction:column; justify-content:center;">
+        <p style="font-size:15px; line-height:1.8; font-weight:300; margin:0 0 28px; color:rgba(255,255,255,0.8); max-width:520px;">At Olive Winter, we offer bespoke styling services tailored to your needs — whether it's personal, commercial, or event styling. Each service is thoughtfully designed to deliver a personalized and professional experience.</p>
+        <a href="Styling Services.dc.html" style="align-self:flex-start; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; border:1px solid rgba(255,255,255,0.6); padding:14px 30px;">Explore styling services</a>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:rgba(255,255,255,0.15);">
+      <sc-for list="{{ services }}" as="svc" hint-placeholder-count="6">
+        <div style="background:oklch(15% 0.005 80); padding:32px 28px;">
+          <span style="font-family:monospace; font-size:11px; color:rgba(255,255,255,0.4);">{{ svc.index }}</span>
+          <h3 style="font-family:'Bodoni Moda',serif; font-weight:400; font-size:19px; margin:14px 0 8px;">{{ svc.name }}</h3>
+          <p style="font-size:12.5px; line-height:1.6; font-weight:300; color:rgba(255,255,255,0.6); margin:0;">{{ svc.blurb }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" style="padding:72px 64px 40px; display:grid; grid-template-columns:1.2fr 0.6fr 0.6fr 0.6fr 1fr; gap:32px;">
+    <div>
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+        <div style="width:34px; height:34px; border:1px solid currentColor; display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:'Bodoni Moda',serif; font-size:17px;">OW</span>
+        </div>
+        <span style="font-family:'Bodoni Moda',serif; font-size:17px;">Olive Winter</span>
+      </div>
+      <p style="font-size:12.5px; line-height:1.7; font-weight:300; color:oklch(15% 0.005 80 / 0.6); max-width:260px;">Made-to-order footwear, made in Brisbane. Quiet luxury, considered production.</p>
+    </div>
+    <div>
+      <h4 style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 16px; color:oklch(15% 0.005 80 / 0.5);">Shop</h4>
+      <sc-for list="{{ shopLinks }}" as="l" hint-placeholder-count="3">
+        <a href="{{ l.href }}" style="display:block; font-size:13px; margin-bottom:10px; color:oklch(15% 0.005 80 / 0.75);">{{ l.label }}</a>
+      </sc-for>
+    </div>
+    <div>
+      <h4 style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 16px; color:oklch(15% 0.005 80 / 0.5);">Services</h4>
+      <sc-for list="{{ serviceLinks }}" as="l" hint-placeholder-count="3">
+        <a href="{{ l.href }}" style="display:block; font-size:13px; margin-bottom:10px; color:oklch(15% 0.005 80 / 0.75);">{{ l.label }}</a>
+      </sc-for>
+    </div>
+    <div>
+      <h4 style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 16px; color:oklch(15% 0.005 80 / 0.5);">Studio</h4>
+      <p style="font-size:13px; line-height:1.8; font-weight:300; margin:0; color:oklch(15% 0.005 80 / 0.75);">Brisbane, Australia<br>by appointment</p>
+    </div>
+    <div>
+      <h4 style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 16px; color:oklch(15% 0.005 80 / 0.5);">Stay in touch</h4>
+      <div style="display:flex; border-bottom:1px solid oklch(15% 0.005 80 / 0.3); padding-bottom:8px;">
+        <input placeholder="Email address" style="border:none; background:none; outline:none; font-family:'Inter',sans-serif; font-size:13px; flex:1; color:inherit;"></input>
+        <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase;">→</span>
+      </div>
+    </div>
+  </footer>
+  <div style="padding:20px 64px; border-top:0.5px solid rgba(0,0,0,0.1); display:flex; justify-content:space-between; font-size:11px; color:oklch(15% 0.005 80 / 0.45);">
+    <span>© 2026 Olive Winter</span>
+    <span>Ethically made, Australian owned</span>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      navLinks: [
+        { label: 'Shop', href: 'Shop.dc.html' },
+        { label: 'Styling Services', href: 'Styling Services.dc.html' },
+        { label: 'Our Story', href: '#story' },
+        { label: 'Contact', href: '#contact' },
+      ],
+      entryPanels: [
+        {
+          tag: 'Direct to consumer',
+          title: 'Shop the Collection',
+          copy: 'Made-to-order footwear and accessories, crafted in small runs from Brisbane.',
+          cta: 'Enter the shop',
+          href: 'Shop.dc.html',
+          stripe: `url('${(window.__resources && window.__resources.hero1) || 'uploads/image1-hero-collection.png'}') center/cover no-repeat`,
+        },
+        {
+          tag: 'Commercial & personal',
+          title: 'Styling Services',
+          copy: 'Store audits, staff training, fashion show and event styling, by consultation.',
+          cta: 'Book a service',
+          href: 'Styling Services.dc.html',
+          stripe: `url('${(window.__resources && window.__resources.hero2) || 'uploads/image2-hero-styling.png'}') center/cover no-repeat`,
+        },
+      ],
+      services: [
+        { index: '01', name: 'Personal Styling', blurb: 'One-on-one wardrobe consultations tailored to your lifestyle and occasion.' },
+        { index: '02', name: 'Store Audits', blurb: 'A considered review of merchandising, presentation and floor styling for retail partners.' },
+        { index: '03', name: 'Staff Training', blurb: 'On-site training for retail teams in product knowledge, fit and customer styling.' },
+        { index: '04', name: 'Fashion Show Styling', blurb: 'Full-look styling and coordination for runway and showroom presentations.' },
+        { index: '05', name: 'Editorial & Shoot Styling', blurb: 'Footwear and wardrobe styling for photography, lookbooks and campaigns.' },
+        { index: '06', name: 'Event Styling', blurb: 'Bespoke styling for launches, private events and commercial occasions.' },
+      ],
+      shopLinks: [
+        { label: 'Footwear', href: 'Shop.dc.html' },
+        { label: 'Accessories', href: 'Shop.dc.html' },
+        { label: 'Made to Order', href: 'Shop.dc.html' },
+      ],
+      serviceLinks: [
+        { label: 'Personal Styling', href: 'Styling Services.dc.html' },
+        { label: 'Commercial Styling', href: 'Styling Services.dc.html' },
+        { label: 'Enquire', href: '#contact' },
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>

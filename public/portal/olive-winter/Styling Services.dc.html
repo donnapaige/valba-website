@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: #141414; color: #f4f1ea; }
+</style>
+</helmet>
+
+<div style="background:oklch(97% 0.008 80); color:oklch(15% 0.005 80); font-family:'Inter',sans-serif;">
+
+  <header style="display:flex; align-items:center; justify-content:space-between; padding:24px 48px; border-bottom:0.5px solid rgba(0,0,0,0.12);">
+    <a href="Homepage.dc.html" style="display:flex; align-items:center; gap:12px;">
+      <div style="width:34px; height:34px; border:1px solid currentColor; display:flex; align-items:center; justify-content:center;">
+        <span style="font-family:'Bodoni Moda',serif; font-size:17px; line-height:1;">OW</span>
+      </div>
+      <span style="font-family:'Bodoni Moda',serif; font-size:17px; letter-spacing:0.02em;">Olive Winter</span>
+    </a>
+    <nav style="display:flex; gap:36px; font-size:12px; letter-spacing:0.12em; text-transform:uppercase;">
+      <a href="Shop.dc.html">Shop</a>
+      <a href="Styling Services.dc.html" style="border-bottom:1px solid currentColor; padding-bottom:2px;">Styling Services</a>
+      <a href="Homepage.dc.html#story">Our Story</a>
+      <a href="Homepage.dc.html#contact">Contact</a>
+    </nav>
+    <a href="#contact" style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; border-bottom:1px solid currentColor; padding-bottom:2px;">Enquire</a>
+  </header>
+
+  <section style="padding:88px 64px 56px; max-width:760px;">
+    <span style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:oklch(15% 0.005 80 / 0.55);">Styling Services</span>
+    <h1 style="font-family:'Bodoni Moda',serif; font-weight:400; font-size:clamp(38px,4.4vw,60px); margin:16px 0 24px; line-height:1.05;">Beyond the shoe.</h1>
+    <p style="font-size:15.5px; line-height:1.8; font-weight:300; color:oklch(15% 0.005 80 / 0.75); margin:0;">At Olive Winter, we offer bespoke styling services tailored to your needs — whether it's personal, commercial, or event styling. Each service is thoughtfully designed to deliver a personalized and professional experience.</p>
+  </section>
+
+  <sc-for list="{{ services }}" as="svc" hint-placeholder-count="6">
+    <section style="display:grid; grid-template-columns:1fr 1fr; align-items:stretch; border-top:0.5px solid rgba(0,0,0,0.12);">
+      <div style="order:{{ svc.imageOrder }}; position:relative; min-height:420px; background:{{ svc.stripe }};"></div>
+      <div style="order:{{ svc.textOrder }}; display:flex; flex-direction:column; justify-content:center; padding:64px;">
+        <span style="font-family:monospace; font-size:12px; color:oklch(15% 0.005 80 / 0.4); margin-bottom:14px;">{{ svc.index }}</span>
+        <h2 style="font-family:'Bodoni Moda',serif; font-weight:400; font-size:clamp(26px,2.6vw,34px); margin:0 0 16px; line-height:1.12;">{{ svc.name }}</h2>
+        <p style="font-size:14.5px; line-height:1.8; font-weight:300; color:oklch(15% 0.005 80 / 0.75); margin:0 0 26px; max-width:440px;">{{ svc.description }}</p>
+        <a href="#contact" style="align-self:flex-start; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; border-bottom:1px solid oklch(15% 0.005 80);">Enquire about this service</a>
+      </div>
+    </section>
+  </sc-for>
+
+  <section id="contact" style="padding:96px 64px; text-align:center; background:oklch(15% 0.005 80); color:oklch(97% 0.008 80);">
+    <h2 style="font-family:'Bodoni Moda',serif; font-weight:400; font-size:clamp(28px,3vw,40px); margin:0 0 18px;">Enquire about styling</h2>
+    <p style="font-size:14.5px; font-weight:300; line-height:1.8; max-width:480px; margin:0 auto 32px; color:rgba(255,255,255,0.75);">Tell us about your brand, event, or occasion, and we'll be in touch to discuss the right service and timeline.</p>
+    <div style="display:flex; gap:10px; justify-content:center; max-width:420px; margin:0 auto;">
+      <input placeholder="Email address" style="flex:1; border:1px solid rgba(255,255,255,0.4); background:none; outline:none; font-family:'Inter',sans-serif; font-size:13px; color:#fff; padding:14px 16px;"></input>
+      <button style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; background:#fff; color:oklch(15% 0.005 80); border:none; padding:0 24px; cursor:pointer;">Send</button>
+    </div>
+  </section>
+
+  <footer style="padding:72px 64px 40px; display:grid; grid-template-columns:1.2fr 0.6fr 0.6fr 0.6fr 1fr; gap:32px;">
+    <div>
+      <a href="Homepage.dc.html" style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+        <div style="width:34px; height:34px; border:1px solid currentColor; display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:'Bodoni Moda',serif; font-size:17px;">OW</span>
+        </div>
+        <span style="font-family:'Bodoni Moda',serif; font-size:17px;">Olive Winter</span>
+      </a>
+      <p style="font-size:12.5px; line-height:1.7; font-weight:300; color:oklch(15% 0.005 80 / 0.6); max-width:260px;">Made-to-order footwear, made in Brisbane. Quiet luxury, considered production.</p>
+    </div>
+    <div>
+      <h4 style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 16px; color:oklch(15% 0.005 80 / 0.5);">Shop</h4>
+      <a href="Shop.dc.html" style="display:block; font-size:13px; margin-bottom:10px;">Footwear</a>
+      <a href="Shop.dc.html" style="display:block; font-size:13px; margin-bottom:10px;">Accessories</a>
+      <a href="Shop.dc.html" style="display:block; font-size:13px; margin-bottom:10px;">Made to Order</a>
+    </div>
+    <div>
+      <h4 style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 16px; color:oklch(15% 0.005 80 / 0.5);">Services</h4>
+      <a href="Styling Services.dc.html" style="display:block; font-size:13px; margin-bottom:10px;">Personal Styling</a>
+      <a href="Styling Services.dc.html" style="display:block; font-size:13px; margin-bottom:10px;">Commercial Styling</a>
+      <a href="#contact" style="display:block; font-size:13px; margin-bottom:10px;">Enquire</a>
+    </div>
+    <div>
+      <h4 style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 16px; color:oklch(15% 0.005 80 / 0.5);">Studio</h4>
+      <p style="font-size:13px; line-height:1.8; font-weight:300; margin:0; color:oklch(15% 0.005 80 / 0.75);">Brisbane, Australia<br>by appointment</p>
+    </div>
+    <div>
+      <h4 style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 16px; color:oklch(15% 0.005 80 / 0.5);">Stay in touch</h4>
+      <div style="display:flex; border-bottom:1px solid oklch(15% 0.005 80 / 0.3); padding-bottom:8px;">
+        <input placeholder="Email address" style="border:none; background:none; outline:none; font-family:'Inter',sans-serif; font-size:13px; flex:1; color:inherit;"></input>
+        <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase;">→</span>
+      </div>
+    </div>
+  </footer>
+  <div style="padding:20px 64px; border-top:0.5px solid rgba(0,0,0,0.1); display:flex; justify-content:space-between; font-size:11px; color:oklch(15% 0.005 80 / 0.45);">
+    <span>© 2026 Olive Winter</span>
+    <span>Ethically made, Australian owned</span>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const items = [
+      { name: 'Personal Styling', description: 'One-on-one wardrobe consultations tailored to your lifestyle, proportions and occasion — from a single edit session to an ongoing styling relationship.', image: 'uploads/01-personal-styling.png' },
+      { name: 'Store Audits', description: 'A considered review of merchandising, floor layout and visual presentation for retail partners, with clear, practical recommendations.', image: 'uploads/02-store-audits.png' },
+      { name: 'Staff Training', description: 'On-site training for retail teams covering product knowledge, fit guidance and customer-facing styling conversations.', image: 'uploads/03-staff-training.png' },
+      { name: 'Fashion Show Styling', description: 'Full-look styling and backstage coordination for runway presentations and showroom previews, from casting to final walk.', image: 'uploads/04-fashion-show-styling.png' },
+      { name: 'Editorial & Shoot Styling', description: 'Footwear and wardrobe styling for photography, lookbooks and campaigns, working closely with photographers and art directors.', image: 'uploads/05-editorial-styling.png' },
+      { name: 'Event Styling', description: 'Bespoke styling for launches, private events and commercial occasions, tailored to the tone and audience of the room.', image: 'uploads/06-event-styling.png' },
+    ];
+    return {
+      services: items.map((s, i) => ({
+        ...s,
+        index: String(i + 1).padStart(2, '0'),
+        imageOrder: i % 2 === 0 ? 1 : 2,
+        textOrder: i % 2 === 0 ? 2 : 1,
+        stripe: `url('${s.image}') center/cover no-repeat`,
+      })),
+    };
+  }
+}
+
+</script>
+</body>
+</html>
